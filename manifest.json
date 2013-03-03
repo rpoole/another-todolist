@@ -1,0 +1,12 @@
+{
+  "manifest_version": 2,
+
+  "name": "Another Todolist",
+  "description": "A simple todolist",
+  "version": "1.0",
+
+  "chrome_url_overrides" : {
+    "newtab": "todolist.html"
+  }
+}
+
