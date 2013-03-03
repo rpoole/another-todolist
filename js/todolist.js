@@ -48,7 +48,6 @@ function layoutView() {
         addListElement($('#current-list'), item);
       });
     } else {
-      var innerHTML = "<a href='#'> " + list.name + "</a>";
       var newLi = addListElement($('#other-lists'), list.name, { class: 'other-list'});
       newLi.click(function() {
         setCurrentList($(this).text());
@@ -68,9 +67,7 @@ function setCurrentList(newCurrent) {
     if (list.name === newCurrent) {
       list.active = true;
     }
-
   });
-
 
   db.setListData(lists);
   layoutView();
