@@ -3,13 +3,19 @@
   <head>
     <title>New Tab</title>
     <link rel="stylesheet" type="text/css" href="css/todolist.css"/>
+    <script type="text/javascript" src="js/lib/underscore-min.js"></script>
     <script type="text/javascript" src="js/lib/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="js/todolist.js"></script>
   </head>
 
   <body>
     <h2 id='current-list-name'></h2>
+    Other lists:
     <ul id='other-lists'></ul>
+    Current list items:
     <ul id='current-list'></ul>
   </body>
+
+  <a id='add-list-button' href='#'>Add</a><br>
+  <a id='remove-list-button' href='#'>Remove Current List</a>
 </html>

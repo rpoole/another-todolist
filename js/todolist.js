@@ -35,6 +35,18 @@ $(function() {
   layoutView();
 });
 
+function removeList(listName) {
+  var lists = db.getListData();
+  lists.forEach(function(list, index) {
+    if (list.name === listName) {
+      lists.splice(index, 1);
+      db.setListData(lists);
+    }
+  });
+
+  setCurrentList(lists[0].name);
+}
+
 function layoutView() {
   var lists = db.getListData();
 
@@ -53,6 +65,10 @@ function layoutView() {
         setCurrentList($(this).text());
       });
     }
+  });
+
+  $('#remove-list-button').click(function() {
+    removeList($('#current-list-name').text());
   });
 }
 
