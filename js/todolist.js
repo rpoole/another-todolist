@@ -45,7 +45,7 @@ $(function() {
       addListItem($('#new-list-item-input').val());
     });
 
-    $('.delete-item-button').on('click', function(e) {
+    $('.delete-item-button').click(function() {
       deleteListItem($(this).attr('listitem'));
     });
   }
@@ -109,6 +109,10 @@ $(function() {
         });
       }
     });
+
+    $('.delete-item-button').click(function() {
+      deleteListItem($(this).attr('listitem'));
+    });
   }
 
   function setCurrentList(newCurrentName) {
@@ -148,6 +152,6 @@ $(function() {
     return newListElement;
   }
 
-  layoutView();
   bindClicks();
+  layoutView();
 });
